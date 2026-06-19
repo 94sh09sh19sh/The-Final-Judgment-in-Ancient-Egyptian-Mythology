@@ -1,0 +1,2562 @@
+<!--位置可以先隨便試，執行看看如何在改就好-->
+<!--右邊是x軸正向、上面是y軸正向、出電腦螢幕是z軸正向，position="x y z"-->
+<!--   可以用"< ! - -"和"- - >"先讓不喜歡的物件消失   -->
+<!--物件與參數使用可以參考這邊，左邊滑到最下面https://aframe.io/docs/1.7.0/introduction/-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>埃及心臟的稱重儀式</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!--The following are outdoor objects-->
+      <!-- 沙漠天空背景 -->
+      <a-sky color="#ACD6FF"></a-sky>
+
+      <!-- 光源：模擬太陽 -->
+      <a-entity
+        light="type: directional; color: #ffffff; intensity: 5"
+        position="2 4 3"
+      ></a-entity>
+      <a-entity
+        light="type: directional; color: #ffffff; intensity: 1"
+        position="-2 4 3"
+      ></a-entity>
+      <!--<a-entity light="type: directional; color: #ffffff; intensity: 3" position="2 4 -3"></a-entity>-->
+      <!--<a-entity light="type: directional; color: #ffffff; intensity: 3" position="-2 4 -3"></a-entity>-->
+
+      <!-- 地面 -->
+      <a-plane
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="1000"
+        height="1000"
+        color="#deb887"
+        shadow
+      ></a-plane>
+
+      <!-- 仙人掌 -->
+      <a-cylinder
+        position="-18 1 -6"
+        radius="0.3"
+        height="2"
+        color="green"
+        src="https://m.media-amazon.com/images/I/81hSsfIJD6L._AC_UF894,1000_QL80_.jpg"
+      ></a-cylinder>
+      <a-cylinder
+        position="-18 2.5 -6"
+        rotation="0 0 90"
+        radius="0.15"
+        height="1"
+        src="https://m.media-amazon.com/images/I/81hSsfIJD6L._AC_UF894,1000_QL80_.jpg"
+      ></a-cylinder>
+
+      <!--遠金字塔-->
+      <!--遠金字塔:大-->
+      <a-entity
+        position="120 0.01 -160"
+        geometry="primitive: cone; segmentsRadial: 4; radiusBottom: 60; radiusTop: 0; height: 70"
+        rotation="0 45 0"
+        material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg; side: double"
+      >
+      </a-entity>
+      <!--遠金字塔:中-->
+      <a-entity
+        position="80 0.01 -180"
+        geometry="primitive: cone; segmentsRadial: 4; radiusBottom: 45; radiusTop: 0; height: 55"
+        rotation="0 45 0"
+        material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg; side: double"
+      >
+      </a-entity>
+      <!--遠金字塔:小-->
+      <a-entity
+        position="50 0.01 -200"
+        geometry="primitive: cone; segmentsRadial: 4; radiusBottom: 30; radiusTop: 0; height: 35"
+        rotation="0 45 0"
+        material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg; side: double"
+      >
+      </a-entity>
+      <!--遠金字塔:彩蛋-->
+      <a-entity
+        position="160 0.01 -360"
+        geometry="primitive: cone; segmentsRadial: 4; radiusBottom: 30; radiusTop: 0; height: 35"
+        rotation="0 45 0"
+        material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg; side: double"
+      >
+      </a-entity>
+
+      <!-- Camels/駱駝們 -->
+      <!--駱駝商隊1號-->
+      <a-entity position="-22 1 -58" rotation="0 -45 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝商隊2號-->
+      <a-entity position="-26 1 -54" rotation="0 -45 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝商隊3號-->
+      <a-entity position="-30 1 -50" rotation="0 -45 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝商隊4號-->
+      <a-entity position="-34 1 -46" rotation="0 -45 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝商隊5號-->
+      <a-entity position="-38 1 -42" rotation="0 -45 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝E-->
+      <a-entity position="100 1 0" rotation="0 -60 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝W-->
+      <a-entity position="-100 1 0" rotation="0 -135 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝S-->
+      <a-entity position="0 1 100" rotation="0 90 0">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝彩蛋1號(in main pyramid)-->
+      <a-entity position="-5 0 -31" rotation="0 -90 0" scale="0.8 0.8 0.8">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5" rotation="0 80 0">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+      <!--駱駝彩蛋2號(in far big pyramid)-->
+      <a-entity position="120 0.01 -160" rotation="0 45 0" scale="5 5 5">
+        <!-- 身體：圓柱 -->
+        <a-cylinder
+          position="0 1.6 0"
+          height="3.3"
+          radius="0.5"
+          rotation="90 0 0"
+          scale="1.1 1 1.4"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 駝峰 -->
+        <a-cone
+          position="0 2.4 0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <a-cone
+          position="0 2.4 -0.6"
+          radius-bottom="0.4"
+          radius-top="0.25"
+          height="0.8"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-cone>
+        <a-sphere
+          position="0 2.75 -0.6"
+          radius="0.25"
+          scale="1 1 1.5"
+          color="#C2B280"
+        ></a-sphere>
+        <!-- 鞍座 -->
+        <!--<a-box position="0 2.1 0" depth="1.5" height="0.2" width="0.8" color="#8B4513"></a-box>-->
+        <!-- 脖子 -->
+        <a-cylinder
+          position="0 2 1.7"
+          height="1.2"
+          radius="0.4"
+          rotation="30 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <!-- 頭部組合放大 -->
+        <a-entity position="0 2.7 2" scale="2.5 2.5 2.5" rotation="0 0 0">
+          <a-sphere position="0 0 0" radius="0.18" color="#C2B280"></a-sphere>
+          <a-cone
+            position="0 0 0.25"
+            radius-bottom="0.16"
+            radius-top="0.06"
+            height="0.3"
+            color="#C2B280"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 耳朵：左右更貼近後方 -->
+          <a-cone
+            position="-0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 -15"
+          ></a-cone>
+          <a-cone
+            position="0.13 0.13 -0.05"
+            height="0.12"
+            radius-bottom="0.03"
+            color="#C2B280"
+            rotation="-90 0 15"
+          ></a-cone>
+          <!-- 眼睛：調整到兩側 -->
+          <a-sphere
+            position="-0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+          <a-sphere
+            position="0.13 0.05 0.08"
+            radius="0.04"
+            color="#000"
+          ></a-sphere>
+        </a-entity>
+        <!-- 腿部 -->
+        <!-- 右前腳 -->
+        <a-cylinder
+          position="-0.3 0.5 1.2"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 右後腳 -->
+        <a-cylinder
+          position="-0.3 0.5 -1"
+          height="2"
+          radius="0.1"
+          rotation="-15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="-0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="165 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左前腳 -->
+        <a-cylinder
+          position="0.3 0.5 0.8"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 1"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 左後腳 -->
+        <a-cylinder
+          position="0.3 0.5 -1.4"
+          height="2"
+          radius="0.1"
+          rotation="15 0 0"
+          color="#C2B280"
+        ></a-cylinder>
+        <a-cone
+          position="0.3 1 -1.2"
+          height="1.5"
+          radius-bottom="0.3"
+          rotation="195 0 0"
+          color="#C2B280"
+        ></a-cone>
+        <!-- 尾巴 -->
+        <a-cylinder
+          position="0 1.4 -1.6"
+          height="1.5"
+          radius="0.05"
+          color="#C2B280"
+          rotation="20 0 0"
+        ></a-cylinder>
+      </a-entity>
+
+      <!--The above are outdoor objects-->
+
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~我是分隔線/I am the dividing line~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+      <!--The following is main Pyramid (including all objects inside)/以下為主金字塔(包含內部所有物件)-->
+      <a-entity id="allPyrmaid" position="0 0 -15"
+        ><!--可修正主金字塔位置-->
+        <!-- 金字塔（中空可進入） -->
+        <!--左邊有個我做的pyrmaid.html，如果需要可以參考/There is a pyrmaid.html I made on the left, you can refer to it if you need it-->
+        <!--<a-cone position="0 0.01 -10" radius-bottom="30" height="35" color="#d4af37" open-ended="true" rotation="0 0 0" material="side: double"></a-cone>-->
+        <a-entity
+          position="0 0 -9"
+          geometry="primitive: cone; segmentsRadial: 4; radiusBottom: 30; radiusTop: 0; height: 35"
+          rotation="0 45 0"
+          material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg; side: double"
+        >
+        </a-entity>
+        <a-box
+          position="0 0 1.2"
+          depth="8.4"
+          height="13.8"
+          width="5"
+          material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg; side: double"
+        ></a-box>
+        <a-box
+          position="0 3.22 1.2"
+          depth="8.5"
+          height="6.4"
+          width="4"
+          material="color: #000000; side: double"
+        ></a-box>
+        <a-box
+          position="0 3.5 -0.4"
+          depth="0.1"
+          height="8"
+          width="4"
+          rotation="-30 0 0"
+          material="src: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRkw-xwJYV3VZrbL0ykQvYXT0_9NEEgiewaw&s"
+        ></a-box>
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~我是分隔線/I am the dividing line~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <!--The following are main character objects-->
+        <!--https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBYN7YTupgdpbatqNGerBRlri-EGHdwHS3Udyk-VIogx7ZHNUA8HLWmevtd2KRslFlQt05Avl5nyUQHykHjO1punAZsN8igFA4fJ9pB82N0xBDGJkzgsrs3TDXhvjxKZ9WddXK/s1600/seatpoe.JPG-->
+
+        <!--以下為阿努比斯/The following is Anubis-->
+        <!-- 阿努比斯 -->
+        <a-entity
+          id="anubis"
+          position="-2 1 -12"
+          animation__breath="property: scale; dir: alternate; dur: 3000; easing: easeInOutSine; loop: true; to: 1.5 1.5 1.5"
+        >
+          <!-- 身體 -->
+          <!--<a-cylinder position="0 1.6 0" radius="0.35" height="1.4" color="#2828FF"></a-cylinder>-->
+          <!-- 短一點的身體 -->
+          <a-cone
+            position="0 1.6 0"
+            radius-bottom="0.5"
+            radius-top="0.2"
+            height="1.4"
+            rotation="180 0 0"
+            color="#2828FF"
+            scale="1 1 0.8"
+          ></a-cone>
+
+          <!-- 頭部 -->
+          <!--調整嘴錐體方向及位置-->
+          <a-cone
+            position="0 2.65 0.35"
+            radius-bottom="0.2"
+            radius-top="0.05"
+            height="0.4"
+            color="#2828FF"
+            rotation="90 0 0"
+          ></a-cone>
+          <!-- 鼻子圓錐 -->
+          <a-sphere position="0 2.7 0" radius="0.25" color="#2828FF"></a-sphere>
+          <!-- 頭後球體 -->
+
+          <!-- 耳朵（分段陰影） -->
+          <a-cone
+            position="-0.15 3.1 0"
+            radius-bottom="0.05"
+            radius-top="0"
+            height="0.3"
+            color="#1c1c1c"
+          ></a-cone>
+          <!-- 外層深灰 -->
+          <a-cone
+            position="-0.15 3.2 0.02"
+            radius-bottom="0.03"
+            radius-top="0"
+            height="0.2"
+            color="#363636"
+          ></a-cone>
+          <!-- 內層淺灰 -->
+          <a-cone
+            position="0.15 3.1 0"
+            radius-bottom="0.05"
+            radius-top="0"
+            height="0.3"
+            color="#1c1c1c"
+          ></a-cone>
+          <a-cone
+            position="0.15 3.2 0.02"
+            radius-bottom="0.03"
+            radius-top="0"
+            height="0.2"
+            color="#363636"
+          ></a-cone>
+
+          <!-- 眼睛 -->
+          <!--放大-->
+          <a-sphere
+            position="-0.08 2.8 0.23"
+            radius="0.04"
+            color="#FFD700"
+          ></a-sphere>
+          <a-sphere
+            position="0.08 2.8 0.23"
+            radius="0.04"
+            color="#FFD700"
+          ></a-sphere>
+
+          <!-- 項圈 -->
+          <!--位置、旋轉-->
+          <a-torus
+            position="0 2.45 0"
+            radius="0.4"
+            radius-tubular="0.03"
+            color="#FFD700"
+            rotation="90 0 0"
+          ></a-torus>
+
+          <!-- 裙襬 -->
+          <!--挑整位置、高度、顏色-->
+          <a-cone
+            position="0 0.9 0"
+            radius-bottom="0.5"
+            radius-top="0.05"
+            height="1.2"
+            src="https://thumb.ac-illust.com/b7/b71c894b1faa7afdf7fb0c8f890557b7_w.jpeg"
+          ></a-cone>
+
+          <!-- 手臂 -->
+          <!--選轉-->
+          <a-cylinder
+            position="-0.5 1.6 0"
+            radius="0.1"
+            height="1.3"
+            rotation="0 0 -20"
+            color="#2828FF"
+          ></a-cylinder>
+          <a-cylinder
+            position="0.5 1.6 0"
+            radius="0.1"
+            height="1.3"
+            rotation="0 0 20"
+            color="#2828FF"
+          ></a-cylinder>
+
+          <!-- 腿部（比例拉長） -->
+          <!--拉長-->
+          <a-cylinder
+            position="-0.15 0 0"
+            radius="0.1"
+            height="1.5"
+            color="#2828FF"
+          ></a-cylinder>
+          <a-cylinder
+            position="0.15 0 0"
+            radius="0.1"
+            height="1.5"
+            color="#2828FF"
+          ></a-cylinder>
+
+          <!-- Was權杖加雕花 -->
+          <a-entity position="-0.8 1.2 0">
+            <a-cylinder radius="0.03" height="3.5" color="#FFD700"></a-cylinder>
+            <a-torus
+              position="0 1.65 0.2"
+              radius="0.15"
+              radius-tubular="0.02"
+              color="#FFD700"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-cylinder
+              position="0 1.65 0.2"
+              radius="0.02"
+              height="0.4"
+              color="#FFD700"
+              rotation="90 0 0"
+            ></a-cylinder>
+            <a-cylinder
+              position="0 1.65 -0.2"
+              radius="0.02"
+              height="0.4"
+              color="#FFD700"
+              rotation="90 0 0"
+            ></a-cylinder>
+            <!-- 雕花裝飾 -->
+            <a-torus
+              position="0 1.5 0"
+              radius="0.06"
+              radius-tubular="0.01"
+              color="#2828FF"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 1.2 0"
+              radius="0.06"
+              radius-tubular="0.01"
+              color="#8B0000"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 0.9 0"
+              radius="0.05"
+              radius-tubular="0.01"
+              color="#2828FF"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 0.6 0"
+              radius="0.05"
+              radius-tubular="0.01"
+              color="#8B0000"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 0.3 0"
+              radius="0.04"
+              radius-tubular="0.01"
+              color="#2828FF"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 0 0"
+              radius="0.04"
+              radius-tubular="0.01"
+              color="#8B0000"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 -0.3 0"
+              radius="0.03"
+              radius-tubular="0.01"
+              color="#2828FF"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 -0.6 0"
+              radius="0.03"
+              radius-tubular="0.01"
+              color="#8B0000"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 -0.9 0"
+              radius="0.02"
+              radius-tubular="0.01"
+              color="#2828FF"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 -1.2 0"
+              radius="0.02"
+              radius-tubular="0.01"
+              color="#8B0000"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 -1.5 0"
+              radius="0.02"
+              radius-tubular="0.01"
+              color="#2828FF"
+              rotation="90 0 0"
+            ></a-torus>
+          </a-entity>
+
+          <!-- 頭飾：烏鴉與太陽盤 -->
+          <!--<a-sphere position="0 3.3 0" radius="0.2" color="#FFD700"></a-sphere>-->
+          <!-- 太陽盤 -->
+          <!--<a-plane position="0 3.4 0.15" width="0.15" height="0.15" color="#000000" rotation="0 0 20"></a-plane>
+            <a-plane position="0 3.4 -0.15" width="0.15" height="0.15" color="#000000" rotation="0 0 -20"></a-plane>-->
+        </a-entity>
+
+        <!-- 阿努比斯發光範圍檢測 -->
+        <!--<a-entity id="player" position="0 1.6 5"></a-entity>-->
+        <!-- 鏡頭 -->
+        <!--<script>
+            AFRAME.registerComponent('anubis-glow', {
+            schema: {},
+            init: function () {
+                this.player = document.querySelector('#player');
+                this.originalColor = '#191970';
+                this.el.setAttribute('material', 'color', this.originalColor);
+            },
+            tick: function () {
+                const anubisPos = this.el.object3D.position;
+                const playerPos = this.player.object3D.position;
+                const distance = anubisPos.distanceTo(playerPos);
+                if (distance < 3) { // 距離小於3公尺時發光
+                this.el.setAttribute('material', 'color', '#4169E1'); // 發亮的藍色
+                } else {
+                this.el.setAttribute('material', 'color', this.originalColor);
+                }
+            }
+            });
+            document.querySelector('#anubis').setAttribute('anubis-glow', '');
+        </script>-->
+        <!--以上為阿努比斯/The above is Anubis-->
+
+        <!--以下為阿米特/The following is Ammit-->
+        <!-- 阿米特 -->
+        <a-entity
+          id="ammit"
+          position="3 0.5 -12"
+          rotation="0 -90 0"
+          scale="0.6 0.6 0.6"
+        >
+          <!-- 頭部群組（包含鱷魚頭、鼻子、牙齒、眼睛、耳朵） -->
+          <a-entity
+            id="ammit-head"
+            position="0 2.5 1.6"
+            animation__rotation="property: rotation; dir: alternate; dur: 100; easing: easeInOutSine; loop: true; from: -30 0 0; to: 30 0 0"
+          >
+            <!-- 鱷魚頭 -->
+            <!--長-->
+            <a-box
+              position="0 0 0"
+              depth="2.8"
+              height="0.3"
+              width="0.4"
+              color="#228B22"
+            ></a-box>
+
+            <!-- 鼻子 -->
+            <a-sphere
+              position="0 0.2 0.8"
+              radius="0.12"
+              color="#006400"
+            ></a-sphere>
+
+            <!-- 眼睛 -->
+            <a-sphere
+              position="-0.25 0.15 -0.2"
+              radius="0.15"
+              color="#FFFF00"
+            ></a-sphere>
+            <a-sphere
+              position="0.25 0.15 -0.2"
+              radius="0.15"
+              color="#FFFF00"
+            ></a-sphere>
+
+            <!-- 耳朵 -->
+            <a-cone
+              position="-0.35 0.4 -0.4"
+              radius-bottom="0.12"
+              radius-top="0"
+              height="0.25"
+              color="#228B22"
+              rotation="-30 0 0"
+            ></a-cone>
+            <a-cone
+              position="0.35 0.4 -0.4"
+              radius-bottom="0.12"
+              radius-top="0"
+              height="0.25"
+              color="#228B22"
+              rotation="-30 0 0"
+            ></a-cone>
+
+            <!-- 牙齒 -->
+            <!--前-->
+            <a-cone
+              position="-0.1 -0.15 1.4"
+              radius-bottom="0.02"
+              radius-top="0"
+              height="0.15"
+              color="#ffffff"
+              rotation="90 0 0"
+            ></a-cone>
+            <a-cone
+              position="0  -0.15 1.4"
+              radius-bottom="0.02"
+              radius-top="0"
+              height="0.15"
+              color="#ffffff"
+              rotation="90 0 0"
+            ></a-cone>
+            <a-cone
+              position="0.1 -0.15 1.4"
+              radius-bottom="0.02"
+              radius-top="0"
+              height="0.15"
+              color="#ffffff"
+              rotation="90 0 0"
+            ></a-cone>
+
+            <!-- 鬃毛 -->
+            <a-torus
+              position="0 -0.2 -1.5"
+              radius="0.8"
+              radius-tubular="0.08"
+              color="#8B4513"
+              rotation="90 0 0"
+            ></a-torus>
+            <a-torus
+              position="0 -0.4 -1.5"
+              radius="0.7"
+              radius-tubular="0.07"
+              color="#8B4513"
+              rotation="90 0 0"
+            ></a-torus>
+
+            <!-- 擺頭動畫（左右搖動） -->
+            <!--<a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 20 0" direction="alternate" repeat="indefinite"></a-animation>-->
+          </a-entity>
+
+          <!-- 獅子上半身:前傾 -->
+          <a-cylinder
+            position="0 1.3 0"
+            radius="0.6"
+            height="2"
+            color="#DAA520"
+            rotation="50 0 0"
+          ></a-cylinder>
+          <!--加-->
+          <a-sphere
+            position="0 1.9 0.65"
+            radius="0.7"
+            color="#DAA520"
+          ></a-sphere>
+
+          <!-- 前腿 -->
+          <!--細-->
+          <a-cylinder
+            position="-0.35 0.5 1.2"
+            radius="0.2"
+            height="2.1"
+            rotation="-20 0 0"
+            color="#DAA520"
+          ></a-cylinder>
+          <a-cylinder
+            position="0.35 0.5 1.2"
+            radius="0.2"
+            height="2.1"
+            rotation="-20 0 0"
+            color="#DAA520"
+          ></a-cylinder>
+
+          <!-- 河馬下半身 -->
+          <a-sphere
+            position="0.3 1.0 -0.6"
+            radius="0.7"
+            color="#8B3A3A"
+            animation__breath="property: scale; dir: alternate; dur: 100; easing: easeInOutSine; loop: true; from 0.8 1 1; to: 1.4 1 1"
+          ></a-sphere>
+          <a-sphere
+            position="-0.3 1.0 -0.6"
+            radius="0.7"
+            color="#8B3A3A"
+            animation__breath="property: scale; dir: alternate; dur: 100; easing: easeInOutSine; loop: true; from: 1.4 1 1; to: 0.8 1 1"
+          ></a-sphere>
+
+          <!-- 後腿 -->
+          <a-cylinder
+            position="-0.4 0.0 -0.9"
+            radius="0.25"
+            height="1.2"
+            color="#8B3A3A"
+          ></a-cylinder>
+          <a-cylinder
+            position="0.4 0.0 -0.9"
+            radius="0.25"
+            height="1.2"
+            color="#8B3A3A"
+          ></a-cylinder>
+
+          <!-- 尾巴 -->
+          <a-cone
+            position="0 0.8 -1.4"
+            radius-bottom="0.1"
+            radius-top="0"
+            height="0.75"
+            color="#8B3A3A"
+            rotation="-45 0 0"
+          ></a-cone>
+        </a-entity>
+        <!--以上為阿米特/The above is Ammit-->
+
+        <!--以下為死者/The following is the deceased-->
+        <!-- 死者 -->
+        <a-entity id="dead-man" position="-4 0 -12" scale="1.5 1.5 1.5">
+          <!-- 頭部 -->
+          <!--https://img.shoplineapp.com/media/image_clips/5f61f0c9498aa2002a3880b0/original.png?1600254153-->
+          <a-entity
+            id="deadman-head"
+            position="0 2.2 0"
+            rotation="0 60 0"
+            animation__rotation="property: rotation; dir: alternate; dur: 200; easing: easeInOutSine; loop: true; from: 0 60 0; to: 0 120 0"
+          >
+            <!-- 頭 -->
+            <a-sphere radius="0.3" color="#e1b899"></a-sphere>
+
+            <!-- 頭髮：左右 -->
+            <a-box
+              position="-0.3 -0.1 0"
+              width="0.02"
+              height="0.6"
+              depth="0.3"
+              src="https://media.istockphoto.com/id/1365604508/zh/%E7%85%A7%E7%89%87/closeup-shot-of-long-curly-brunette-hair.jpg?s=612x612&w=0&k=20&c=xrbiWJnESLcixYmMyuYGdggy0XeWu67VywzUoVnfWQU="
+            ></a-box>
+            <a-box
+              position="0.3 -0.1 0"
+              width="0.02"
+              height="0.6"
+              depth="0.3"
+              src="https://media.istockphoto.com/id/1365604508/zh/%E7%85%A7%E7%89%87/closeup-shot-of-long-curly-brunette-hair.jpg?s=612x612&w=0&k=20&c=xrbiWJnESLcixYmMyuYGdggy0XeWu67VywzUoVnfWQU="
+            ></a-box>
+
+            <!-- 頭髮：後上 -->
+            <a-box
+              position="0 -0.1 -0.3"
+              width="0.4"
+              height="0.7"
+              depth="0.02"
+              rotation="0 0 0"
+              src="https://media.istockphoto.com/id/1365604508/zh/%E7%85%A7%E7%89%87/closeup-shot-of-long-curly-brunette-hair.jpg?s=612x612&w=0&k=20&c=xrbiWJnESLcixYmMyuYGdggy0XeWu67VywzUoVnfWQU="
+            ></a-box>
+            <a-sphere
+              position="0 0.15 0"
+              radius="0.25"
+              theta-length="180"
+              rotation="90 0 0"
+              src="https://media.istockphoto.com/id/1365604508/zh/%E7%85%A7%E7%89%87/closeup-shot-of-long-curly-brunette-hair.jpg?s=612x612&w=0&k=20&c=xrbiWJnESLcixYmMyuYGdggy0XeWu67VywzUoVnfWQU="
+            ></a-sphere>
+
+            <!-- 金色裝飾:環繞頭部 -->
+            <!--<a-ring position="0 0.2 0" radius-inner="0.25" radius-outer="0.34" color="#FFD700" rotation="90 0 0"></a-ring>-->
+            <a-torus
+              position="0 0.2 0"
+              radius="0.3"
+              radius-tubular="0.02"
+              color="#FFD700"
+              rotation="90 0 0"
+            ></a-torus>
+
+            <!-- 眼睛:含眼線 -->
+            <a-circle
+              position="-0.12 0.05 0.29"
+              radius="0.035"
+              color="black"
+            ></a-circle>
+            <a-triangle
+              position="-0.12 0.05 0.291"
+              color="black"
+              vertex-a="0 0 0"
+              vertex-b="0.05 0.01 0"
+              vertex-c="0 -0.01 0"
+            ></a-triangle>
+
+            <a-circle
+              position="0.12 0.05 0.29"
+              radius="0.035"
+              color="black"
+            ></a-circle>
+            <a-triangle
+              position="0.12 0.05 0.291"
+              color="black"
+              vertex-a="0 0 0"
+              vertex-b="-0.05 0.01 0"
+              vertex-c="0 -0.01 0"
+            ></a-triangle>
+
+            <!-- 鼻子 -->
+            <a-cone
+              position="0 0 0.29"
+              height="0.1"
+              radius-bottom="0.015"
+              radius-top="0.005"
+              color="#d9a679"
+              rotation="-90 0 0"
+            ></a-cone>
+
+            <!-- 嘴巴 -->
+            <a-plane
+              position="0 -0.08 0.29"
+              width="0.08"
+              height="0.015"
+              color="#8b0000"
+            ></a-plane>
+
+            <!-- 耳朵 -->
+            <!--<a-cylinder position="-0.3 0 0" radius="0.025" height="0.05" rotation="0 0 90" color="#e1b899"></a-cylinder>
+            <a-cylinder position="0.3 0 0" radius="0.025" height="0.05" rotation="0 0 90" color="#e1b899"></a-cylinder>-->
+
+            <!-- 頭頂飾品 -->
+            <a-sphere
+              position="0 0.25 0.3"
+              radius="0.05"
+              color="gold"
+            ></a-sphere>
+          </a-entity>
+
+          <!-- 上半身 -->
+          <a-cone
+            position="0 1.65 0"
+            radius-bottom="0.3"
+            radius-top="0.15"
+            height="0.6"
+            rotation="180 0 0"
+            color="#FFFFFF"
+            src="https://img.freepik.com/premium-photo/3d-podium-abstract-white-background-composition-product-with-white-hexagons-background_644709-110.jpg?semt=ais_hybrid&w=740"
+          ></a-cone>
+
+          <!-- 下半身 -->
+          <a-cone
+            position="0 1.05 0"
+            radius-bottom="0.3"
+            radius-top="0.15"
+            height="0.6"
+            color="#F5F5DC"
+            src="https://oneyard.shop/uploads/product/3/9/39137/off-white-hex-meshes-fine-bridal-soft-tulle-fabric.webp"
+            animation__breath="property: scale; dir: alternate; dur: 1000; easing: easeInOutSine; loop: true; from: 1.5 1 1; to: 1 1 1.5"
+          ></a-cone>
+
+          <!-- 脖子裝飾 -->
+          <a-ring
+            position="0 1.95 0"
+            radius-inner="0.15"
+            radius-outer="0.22"
+            rotation="90 0 0"
+            color="#C2B280"
+          ></a-ring>
+
+          <!-- 雙臂 -->
+          <a-cylinder
+            position="-0.35 1.65 0"
+            radius="0.07"
+            height="0.7"
+            rotation="0 0 10"
+            color="#e1b899"
+          ></a-cylinder>
+          <a-cylinder
+            position="0.35 1.65 0"
+            radius="0.07"
+            height="0.7"
+            rotation="0 0 -10"
+            color="#e1b899"
+          ></a-cylinder>
+
+          <!-- 手掌 -->
+          <a-sphere
+            position="-0.31 1.3 0"
+            radius="0.08"
+            color="#e1b899"
+          ></a-sphere>
+          <a-sphere
+            position="0.31 1.3 0"
+            radius="0.08"
+            color="#e1b899"
+          ></a-sphere>
+
+          <!-- 雙腳 -->
+          <a-cylinder
+            position="-0.15 0.5.5 0"
+            radius="0.08"
+            height="0.7"
+            color="#e1b899"
+            animation__breath="property: scale; dir: alternate; dur: 100; easing: easeInOutSine; loop: true; from: 1 0.7 1; to: 1 1.3 1"
+          ></a-cylinder>
+          <a-cylinder
+            position="0.15 0.5.5 0"
+            radius="0.08"
+            height="0.7"
+            color="#e1b899"
+            animation__breath="property: scale; dir: alternate; dur: 100; easing: easeInOutSine; loop: true; from: 1 1.3 1; to: 1 0.7 1"
+          ></a-cylinder>
+        </a-entity>
+        <!--以上為死者/The above is the deceased-->
+
+        <!--The above are main character objects-->
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~我是分隔線/I am the dividing line~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <!--The following are indoor objects-->
+        <!--位置可以先隨便試，執行看看如何在改就好-->
+        <!--右邊是x軸正向、上面是y軸正向、出電腦螢幕是z軸正向，position="x y z"-->
+        <!--   可以用"< ! - -"和"- - >"先讓不喜歡的物件消失   -->
+        <!--物件與參數使用可以參考這邊，左邊滑到最下面https://aframe.io/docs/1.7.0/introduction/-->
+
+        <!-- 金字塔內部物件 -->
+        <a-box
+          position="0 0.1 -10"
+          width="8"
+          height="0.2"
+          depth="8"
+          color="#c2b280"
+        ></a-box>
+        <!-- 地板 -->
+
+        <!--左邊有個我做的pyrmaid.html，如果需要可以參考  好ㄟ感謝你-->
+        <!-- 牆壁N -->
+        <a-box
+          position="0 3 -15"
+          rotation="0 0 0"
+          width="12"
+          height="6.75"
+          depth="0.1"
+          material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg"
+        ></a-box>
+        <!-- 牆壁S -->
+        <a-box
+          position="0 3 -3"
+          rotation="0 0 0"
+          width="12"
+          height="6.75"
+          depth="0.1"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Wall3.png?v=1746012366674"
+        ></a-box>
+        <!-- 牆壁E -->
+        <a-box
+          position="-6 3 -9"
+          rotation="0 90 0"
+          width="12"
+          height="6.75"
+          depth="0.1"
+          material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg"
+        ></a-box>
+        <!-- 牆壁W -->
+        <a-box
+          position="6 3 -9"
+          rotation="0 90 180"
+          width="12"
+          height="6.75"
+          depth="0.1"
+          material="src: https://static.turbosquid.com/Preview/2014/08/01__17_13_45/4.jpgfffb67fa-02ca-4fa5-b9b7-03dc00fc3ef2Zoom.jpg"
+        ></a-box>
+        <!-- 天平 -->
+        <a-cylinder
+          position="-0.5 2.5 -10"
+          radius="0.05"
+          height="4"
+          rotation="0 0 90"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture3.png?v=1746013123819"
+        ></a-cylinder>
+        <a-cylinder
+          position="-0.5 1.5 -10"
+          radius="0.05"
+          height="2.5"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture3.png?v=1746013123819"
+        ></a-cylinder>
+        <a-cylinder
+          position="-0.5 0.2 -10"
+          radius="0.8"
+          height="0.1"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture2.png?v=1746013042441"
+        ></a-cylinder>
+        <a-cylinder
+          position="-2.35 1 -10"
+          radius="0.5"
+          height="0.03"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture5.png?v=1746014099080"
+        ></a-cylinder>
+        <a-cylinder
+          position="1.35 1 -10"
+          radius="0.5"
+          height="0.03"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture5.png?v=1746014099080"
+        ></a-cylinder>
+        <a-cylinder
+          position="1.55 1.75 -10"
+          radius="0.01"
+          height="1.62"
+          rotation="0 0 15"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture5.png?v=1746014099080"
+        ></a-cylinder>
+        <a-cylinder
+          position="1.15 1.75 -10"
+          radius="0.01"
+          height="1.62"
+          rotation="0 0 -15"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture5.png?v=1746014099080"
+        ></a-cylinder>
+        <a-cylinder
+          position="-2.55 1.75 -10"
+          radius="0.01"
+          height="1.62"
+          rotation="0 0 -15"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture5.png?v=1746014099080"
+        ></a-cylinder>
+        <a-cylinder
+          position="-2.15 1.75 -10"
+          radius="0.01"
+          height="1.62"
+          rotation="0 0 15"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Balance-Texture5.png?v=1746014099080"
+        ></a-cylinder>
+        <!-- 心臟 -->
+        <a-sphere
+          position="1.35 1.15 -10"
+          radius="0.15"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/heart-texture2.png?v=1746015654014"
+        ></a-sphere>
+        <!-- 羽毛 -->
+        <a-box
+          position="-2.33 1.05 -10"
+          width="0.3"
+          height="0.005"
+          depth="0.8"
+          rotation="0 90 15"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/feather-texture6.png?v=1746018195509; transparent: true"
+        ></a-box>
+        <!-- 棺材 -->
+        <a-box
+          position="4.2 2 -14.8"
+          width="4"
+          height="2.25"
+          depth="0.25"
+          rotation="0 0 90"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/coffin-texture3.png?v=1746019865915"
+        ></a-box>
+        <!-- 火把 -->
+        <a-cylinder
+          position="-2.7 1.75 -6.5"
+          radius="0.1"
+          height="3"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/torch-texture.png?v=1746020690220"
+        ></a-cylinder>
+        <a-dodecahedron
+          position="-2.7 3.6 -6.5"
+          radius="0.25"
+          height="2"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Fire-Texture.png?v=1746088150421"
+        ></a-dodecahedron>
+        <a-cylinder
+          position="-2.7 3.23 -6.5"
+          radius="0.15"
+          height="0.15"
+          rotation="0 90 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/torch-texture.png?v=1746020690220"
+        ></a-cylinder>
+        <a-cylinder
+          position="2.7 1.75 -6.5"
+          radius="0.1"
+          height="3"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/torch-texture.png?v=1746020690220"
+        ></a-cylinder>
+        <a-dodecahedron
+          position="2.7 3.6 -6.5"
+          radius="0.25"
+          height="2"
+          rotation="0 0 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/Fire-Texture.png?v=1746088150421"
+        ></a-dodecahedron>
+        <a-cylinder
+          position="2.7 3.23 -6.5"
+          radius="0.15"
+          height="0.15"
+          rotation="0 90 0"
+          material="src: https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/torch-texture.png?v=1746020690220"
+        ></a-cylinder>
+        <!-- 壁畫（模擬貼圖） -->
+        <a-plane
+          position="0 3.5 -14.9"
+          rotation="0 0 0"
+          width="6"
+          height="3.375"
+          src="https://cdn.glitch.global/dc3c8dc7-da42-404b-b029-df8deace4c82/AlbedoBase_XL_create_a_texture_to_use_in_Glitch_this_texture_i_3.jpg?v=1745912077739"
+        ></a-plane>
+
+        <!--The above are indoor objects-->
+
+        <!-- 相機與控制器（可移動與滑鼠控制） -->
+        <!--<a-entity id="player" position="0 1.6 5">
+            <a-camera wasd-controls-enabled="true" look-controls="pointerLockEnabled: true"></a-camera>
+        </a-entity>-->
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
